@@ -6,7 +6,7 @@ export default function Brand({ light = false }) {
 
   return (
     <button className={`brand ${light ? "brand-light" : ""}`} onClick={() => navigate("/")}>
-      <span className="brand-mark"><span></span><span></span><span></span></span>
+      <img src="/images/logos/quorda_logo.png" alt="Quorda" className="brand-logo" />
       <span>QUORDA<span className="brand-dot">.</span></span>
     </button>
   );

@@ -66,36 +66,18 @@
   .sidebar .brand {
     color: #fff;
   }
-.brand-light {
-  color: #fff;
-}
+  .brand-light {
+    color: #fff;
+  }
+  .brand-logo {
+    width: 42px;
+    height: 38px;
+    object-fit: contain;
+  }
 .brand-dot {
-  color: var(--green);
-}
-.brand-mark {
-  width: 27px;
-  height: 25px;
-  display: flex;
-  align-items: flex-end;
-  gap: 3px;
-}
-.brand-mark span {
-  display: block;
-  width: 6px;
-  background: var(--green);
-  border-radius: 8px 8px 1px 1px;
-  transform: rotate(-8deg);
-}
-.brand-mark span:nth-child(1) {
-  height: 13px;
-}
-.brand-mark span:nth-child(2) {
-  height: 22px;
-}
-.brand-mark span:nth-child(3) {
-  height: 17px;
-}
-.sidebar nav {
+    color: var(--green);
+  }
+  .sidebar nav {
   margin-top: 70px;
   display: flex;
   flex-direction: column;
