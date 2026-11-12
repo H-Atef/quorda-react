@@ -1,12 +1,13 @@
-
 .auth-art::before {
   border-color: var(--green);
 }
+
 .role-select button.active {
   background: var(--ink);
   border-color: var(--ink);
   box-shadow: 3px 3px 0 var(--green);
 }
+
 .auth-form input,
 .profile-form input,
 .profile-form select,
@@ -15,71 +16,89 @@
 .quick-add select {
   border-bottom: 2px solid var(--ink);
 }
+
 .chart .line {
   stroke: var(--deep);
   stroke-width: 2.5;
   stroke-dasharray: 5 3;
 }
+
 @media (max-width: 1100px) {
   .sidebar {
     width: 190px;
   }
+
   .main {
     margin-left: 190px;
     width: calc(100% - 190px);
   }
+
   .sidebar-collapsed .main {
     margin-left: 82px;
     width: calc(100% - 82px);
   }
+
   .search-button {
     width: 40px;
   }
+
   .search-button span,
   .search-button kbd {
     display: none;
   }
+
   .hero {
     grid-template-columns: 52% 48%;
   }
+
   .stats-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .dish-image {
     height: 230px;
   }
+
   .product-head,
   .product-row {
-    grid-template-columns: 2fr 0.7fr 0.7fr 1fr 32px;
+    grid-template-columns: 2fr 0.8fr 0.7fr 1.1fr 35px;
   }
-  .product-head > *:nth-child(4),
-  .product-row > *:nth-child(4) {
+
+  .product-head>*:nth-child(4),
+  .product-row>*:nth-child(4) {
     display: none;
   }
+
   .manifesto {
     grid-template-columns: 1fr;
   }
-  .manifesto > .button {
+
+  .manifesto>.button {
     position: static;
     width: max-content;
   }
+
   .auth-page {
     grid-template-columns: 43% 57%;
   }
+
   .auth-form-wrap {
     padding-left: 6vw;
     padding-right: 6vw;
   }
 }
+
 @media (max-width: 760px) {
   .sidebar {
     transform: translateX(-100%);
     width: 240px;
     transition: 0.25s;
   }
+
   .sidebar-open {
     transform: translateX(0);
   }
+
   /* On mobile the sidebar is an overlay drawer. The collapse toggle stays
      usable at all times: it pins to the viewport's left edge when the
      drawer is closed and slides to the drawer's right edge when open. */
@@ -92,48 +111,59 @@
     display: grid;
     border-radius: 0 50% 50% 0;
   }
+
   .sidebar-open .sidebar-toggle {
     left: 240px;
     border-radius: 50% 0 0 50%;
   }
+
   .scribble {
     bottom: 90px;
   }
+
   .sidebar-collapsed .sidebar {
     width: 240px;
     padding: 30px 20px 24px;
   }
+
   .sidebar-collapsed .sidebar .brand,
   .sidebar-collapsed .sidebar nav button,
   .sidebar-collapsed .sidebar-bottom {
     flex-direction: row;
     justify-content: flex-start;
   }
-  .sidebar-collapsed .sidebar .brand > span:last-child,
-  .sidebar-collapsed .sidebar nav button > span,
-  .sidebar-collapsed .mini-profile > div:last-child {
+
+  .sidebar-collapsed .sidebar .brand>span:last-child,
+  .sidebar-collapsed .sidebar nav button>span,
+  .sidebar-collapsed .mini-profile>div:last-child {
     display: flex;
   }
+
   .sidebar-collapsed .sidebar nav button {
     justify-content: flex-start;
     padding-inline: 14px;
   }
+
   .sidebar-collapsed .sidebar-bottom {
     flex-direction: row;
     gap: 0;
   }
+
   .main {
     margin-left: 0;
     width: 100%;
   }
+
   .sidebar-collapsed .main {
     margin-left: 0;
     width: 100%;
   }
+
   .topbar {
     height: 75px;
     padding: 0 20px;
   }
+
   .mobile-menu {
     display: flex;
     width: 38px;
@@ -145,172 +175,216 @@
     align-items: center;
     gap: 5px;
   }
+
   .mobile-menu span {
     width: 16px;
     border-top: 1px solid #fff;
   }
+
   .topbar-title .eyebrow {
     display: none;
   }
+
   .topbar-title h2 {
     font-size: 16px;
   }
+
   .round-button,
   .search-button {
     display: none;
   }
+
   .page {
     padding: 30px 20px 55px;
   }
+
   .home-page {
     padding-top: 0;
   }
+
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
     margin: 0 -20px;
     padding: 0;
   }
+
   .hero-copy {
     padding: 65px 25px 45px;
   }
+
   .hero-visual {
     padding: 0 0 40px;
   }
+
   .image-frame {
     height: 400px;
     margin: 0 20px;
     border-radius: 180px 180px 2px 2px;
   }
+
   .hero-note {
     left: 20px;
   }
+
   .poster-rings {
     width: 115px;
     height: 115px;
     right: -34px;
     top: -35px;
   }
+
   .poster-shape-one {
     width: 55px;
     height: 55px;
     left: 4px;
     top: 45px;
   }
+
   .vertical-caption {
     display: none;
   }
+
   .food-doodle {
     width: 105px;
     right: 18px;
     bottom: 20px;
     opacity: 0.45;
   }
+
   .menu-section {
     padding: 65px 0;
   }
+
   .dish-grid {
     grid-template-columns: 1fr;
   }
+
   .dish-card:nth-child(2),
   .dish-card:nth-child(3) {
     margin-top: 28px;
   }
+
   .dish-image {
     height: 360px;
   }
+
   .section-heading {
     align-items: start;
   }
+
   .section-heading .text-button {
     display: none;
   }
+
   .manifesto {
     margin: 0 -20px -55px;
     padding: 60px 25px;
     grid-template-columns: 1fr;
   }
+
   .promise-grid {
     grid-template-columns: 1fr;
   }
+
   .page-intro {
     align-items: flex-start;
     flex-direction: column;
   }
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
+
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
+
   .orders-panel,
   .full-panel {
     padding: 18px;
   }
+
   .quick-add {
     flex-direction: column;
     align-items: stretch;
   }
-  .quick-add > div {
+
+  .quick-add>div {
     grid-template-columns: 1fr;
   }
+
   .product-summary {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .product-summary .product-search {
     grid-column: 1/-1;
     margin: 0;
     width: auto;
     border-top: 1px solid var(--line);
   }
+
   .product-panel {
     padding: 5px 14px;
   }
+
   .management-tabs {
     display: flex;
     overflow-x: auto;
   }
+
   .management-tabs button {
     min-width: 190px;
     flex: 1;
   }
+
   .tab-context,
   .tab-action-row {
     align-items: flex-start;
   }
+
   .info-button span {
     display: none;
   }
+
   .info-button {
     padding: 0;
     width: 38px;
     justify-content: center;
     flex: 0 0 38px;
   }
+
   .category-panel {
     padding: 5px 14px;
   }
+
   .category-head {
     display: none;
   }
+
   .category-manage-row {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 18px 14px;
   }
-  .category-manage-row > span:nth-of-type(1),
-  .category-manage-row > span:nth-of-type(2) {
+
+  .category-manage-row>span:nth-of-type(1),
+  .category-manage-row>span:nth-of-type(2) {
     display: none;
   }
+
   .category-manage-row .cat-main {
     display: flex;
     align-items: center;
     gap: 12px;
   }
+
   .category-manage-row .cat-main b {
     font: 400 14px var(--display);
   }
+
   .category-manage-row .cat-meta {
     display: flex;
     justify-content: space-between;
@@ -319,171 +393,267 @@
     font-size: 11px;
     color: #626862;
   }
+
   .category-manage-row .cat-meta span {
     color: #909691;
     font-size: 8px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
   }
+
   .category-manage-row .priority-control {
     display: flex;
     align-items: center;
     gap: 13px;
   }
+
   .category-manage-row .priority-control select {
     width: auto;
     height: 30px;
   }
+
   .priority-dots {
     display: none;
   }
+
   .weights-layout {
     grid-template-columns: 1fr;
   }
+
   .weight-summary {
     position: static;
   }
+
   .weight-row {
     grid-template-columns: 28px 1fr 52px;
     gap: 12px;
     padding: 17px 0;
   }
+
   .weight-row input[type="range"] {
     grid-column: 2 / -1;
     grid-row: 2;
   }
+
   .weight-row output {
     grid-column: 3;
     grid-row: 1;
   }
+
   .product-head {
     display: none;
   }
+
   .product-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 18px 14px;
-  }
-  .product-row > span,
-  .product-row > b,
-  .product-row > .sold-bar,
-  .product-row > .toggle,
-  .product-row > .edit-button {
-    position: relative;
-    padding: 8px 0 8px 48px;
-    font-size: 11px;
-    color: #626862;
-  }
-  .product-row > span::before,
-  .product-row > b::before,
-  .product-row > .sold-bar::before,
-  .product-row > .toggle::before,
-  .product-row > .edit-button::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 42px;
-    font-size: 8px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: #909691;
-  }
-  .product-row > b {
-    color: var(--ink);
-    font: 400 13px var(--display);
-  }
-  .product-row > .toggle {
     display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .product-row > .edit-button {
-    border: 1px solid var(--line);
-    background: #fff;
-    width: 32px;
-    height: 32px;
-    display: grid;
-    place-items: center;
-  }
-  .profile-grid {
-    grid-template-columns: 1fr;
-  }
-  .fields {
-    grid-template-columns: 1fr;
-  }
-  .fields .wide {
-    grid-column: auto;
-  }
-  .auth-page {
-    grid-template-columns: 1fr;
-  }
-  .auth-art {
-    min-height: 420px;
-    padding: 30px 25px;
-  }
-  .auth-quote {
-    margin-top: 60px;
-  }
-  .auth-quote h1 {
-    font-size: 46px;
-  }
-  .auth-art > img {
-    height: 50%;
-    opacity: 0.3;
-  }
-  .auth-form-wrap {
-    padding: 90px 25px 50px;
-  }
-  .back-link {
-    left: 25px;
-  }
-  .role-select {
-    align-items: flex-start;
     flex-direction: column;
+    gap: 0;
+    padding: 16px 14px;
+    border-top: 1px solid #e4e6e1;
   }
-  .hero h1 {
-    font-size: 54px;
+
+  /* Full-width dish name block – no label prefix needed */
+  .product-row>.product-name {
+    margin-bottom: 12px;
+    padding: 0;
   }
-  .hero-cta {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-@media (max-width: 430px) {
-  .topbar-title {
-    display: none;
-  }
-  .dish-image {
-    height: 280px;
-  }
-  .hero h1 {
-    font-size: 47px;
-  }
-  .hero-cta > span {
-    display: none;
-  }
-  .manifesto h2 {
-    font-size: 40px;
-  }
-  .product-summary {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .product-summary > div {
-    padding: 15px 12px;
-  }
-  .form-title {
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .form-title .button {
-    padding: 0 12px;
-  }
-  .auth-quote h1 {
-    font-size: 39px;
-  }
-  .auth-form h2 {
-    font-size: 35px;
-  }
-}
+
+  /* Every other cell: label on the left, value on the right */
+  .product-row>span,
+  .product-row>b,
+  .product-row>.sold-bar,
+    .product-row>.toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 36px;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f1ec;
+      font-size: 12px;
+      color: #2a2e2b;
+      gap: 12px;
+    }
+
+    .product-row>span:last-of-type,
+    .product-row>.toggle {
+      border-bottom: none;
+    }
+
+    /* Label pseudo-element: left-aligned, uppercase, muted */
+    .product-row>span::before,
+    .product-row>b::before,
+    .product-row>.sold-bar::before,
+      .product-row>.toggle::before {
+        content: attr(data-label);
+        flex-shrink: 0;
+        width: 110px;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #909691;
+      }
+
+      /* Price bold style */
+      .product-row>b {
+        color: var(--ink);
+        font: 600 13px var(--display);
+      }
+
+      /* Sold bar: show label + number only on mobile, hide the abs-positioned track */
+      .product-row>.sold-bar {
+        position: static;
+      }
+
+      .product-row>.sold-bar::before {
+        /* override the global ::before track-bar with the label text */
+        content: attr(data-label);
+        width: 110px;
+        height: auto;
+        background: none;
+        position: static;
+        flex-shrink: 0;
+      }
+
+      /* hide the absolute progress bar element on mobile */
+      .product-row>.sold-bar>i {
+        display: none;
+      }
+
+      /* Toggle pill: label on left, toggle control on right */
+      .product-row>.toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 6px;
+      }
+
+      /* Edit button: standalone at bottom-right, no label */
+      .product-row>.edit-button {
+        align-self: flex-end;
+        margin-top: 8px;
+        border: 1px solid var(--line);
+        background: #fff;
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-items: center;
+        padding: 0;
+      }
+
+      /* Shrink dish image slightly on mobile */
+      .product-name img {
+        width: 48px;
+        height: 42px;
+      }
+
+      /* Allow action row to wrap so the button doesn't overflow */
+      .tab-action-row {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fields {
+        grid-template-columns: 1fr;
+      }
+
+      .fields .wide {
+        grid-column: auto;
+      }
+
+      .auth-page {
+        grid-template-columns: 1fr;
+      }
+
+      .auth-art {
+        min-height: 420px;
+        padding: 30px 25px;
+      }
+
+      .auth-quote {
+        margin-top: 60px;
+      }
+
+      .auth-quote h1 {
+        font-size: 46px;
+      }
+
+      .auth-art>img {
+        height: 50%;
+        opacity: 0.3;
+      }
+
+      .auth-form-wrap {
+        padding: 90px 25px 50px;
+      }
+
+      .back-link {
+        left: 25px;
+      }
+
+      .role-select {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 54px;
+      }
+
+      .hero-cta {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .topbar-title {
+        display: none;
+      }
+
+      .dish-image {
+        height: 280px;
+      }
+
+      .hero h1 {
+        font-size: 47px;
+      }
+
+      .hero-cta>span {
+        display: none;
+      }
+
+      .manifesto h2 {
+        font-size: 40px;
+      }
+
+      .product-summary {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .product-summary>div {
+        padding: 15px 12px;
+      }
+
+      .form-title {
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .form-title .button {
+        padding: 0 12px;
+      }
+
+      .auth-quote h1 {
+        font-size: 39px;
+      }
+
+      .auth-form h2 {
+        font-size: 35px;
+      }
+    }
