@@ -1,0 +1,231 @@
+.page-intro {
+  margin-bottom: 38px;
+}
+.page-intro > div > p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.stat {
+  min-height: 185px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 23px;
+  position: relative;
+  overflow: hidden;
+}
+.stat.dark {
+  background: var(--deep);
+  color: #fff;
+  border-color: var(--deep);
+}
+.stat > span {
+  font-size: 11px;
+  color: #7b827c;
+}
+.stat strong {
+  display: block;
+  font: 400 38px var(--display);
+  margin: 18px 0 8px;
+}
+.stat strong span {
+  font-size: 22px;
+}
+.stat p {
+  font-size: 9px;
+  color: #7d837e;
+}
+.stat p b {
+  color: #4e7e32;
+}
+.stat.dark p b {
+  color: var(--green);
+}
+.stat button {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  padding: 2px 0;
+  display: flex;
+  gap: 7px;
+  font-size: 10px;
+  position: absolute;
+  bottom: 20px;
+}
+.bar-cluster {
+  position: absolute;
+  right: 17px;
+  bottom: 25px;
+  display: flex;
+  align-items: end;
+  gap: 4px;
+}
+.bar-cluster i {
+  width: 5px;
+  background: #bed886;
+  height: 20px;
+}
+.bar-cluster i:nth-child(2) {
+  height: 35px;
+}
+.bar-cluster i:nth-child(3) {
+  height: 28px;
+}
+.bar-cluster i:nth-child(4) {
+  height: 47px;
+}
+.bar-cluster i:nth-child(5) {
+  height: 42px;
+  background: var(--deep);
+}
+.circle-stat {
+  position: absolute;
+  right: 17px;
+  bottom: 19px;
+  border: 5px solid var(--green);
+  border-left-color: #dfe3da;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 9px;
+}
+.mini-line {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  width: 160px;
+  height: 55px;
+  border-top: 2px solid var(--green);
+  transform: skewY(-12deg);
+  opacity: 0.7;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.panel {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.chart-panel,
+.popular-panel,
+.orders-panel {
+  padding: 25px;
+}
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.panel-heading h2 {
+  font: 400 24px var(--display);
+  margin: 5px 0 0;
+}
+.panel-heading select,
+.date-picker {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 9px 12px;
+  font-size: 10px;
+}
+.panel-heading > button:not(.text-button) {
+  border: 0;
+  background: transparent;
+}
+.chart {
+  height: 230px;
+  display: flex;
+}
+.y-labels {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 27px;
+  font-size: 8px;
+  color: #989e99;
+}
+.chart-area {
+  position: relative;
+  flex: 1;
+}
+.grid-lines {
+  position: absolute;
+  inset: 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.grid-lines i {
+  border-top: 1px dashed #dfe2dc;
+}
+.chart svg {
+  position: absolute;
+  inset: 0 0 25px;
+  width: 100%;
+  height: calc(100% - 25px);
+  overflow: visible;
+}
+.chart .area {
+  fill: rgba(184, 239, 51, 0.17);
+  stroke: none;
+}
+.chart .line {
+  fill: none;
+  stroke: var(--deep);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.x-labels {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #8a908b;
+}
+.popular-row {
+  display: grid;
+  grid-template-columns: 20px 44px 1fr auto;
+  gap: 9px;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #e4e6e1;
+}
+.popular-row > span {
+  font: italic 10px var(--display);
+  color: #888;
+}
+.popular-row img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+}
+.popular-row div {
+  display: flex;
+  flex-direction: column;
+}
+.popular-row div b {
+  font: 400 12px var(--display);
+}
+.popular-row small {
+  font-size: 8px;
+  color: #888;
+  margin-top: 4px;
+}
+.popular-row strong {
+  font-size: 10px;
+}
+.orders-panel {
+  margin-top: 14px;
+}

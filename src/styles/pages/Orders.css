@@ -1,0 +1,128 @@
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 720px;
+  text-align: left;
+}
+th {
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #909691;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+td {
+  font-size: 10px;
+  color: #626862;
+  padding: 13px 12px;
+  border-bottom: 1px solid #e7e9e4;
+}
+td b {
+  color: var(--ink);
+}
+td:last-child button {
+  border: 0;
+  background: none;
+}
+.customer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.customer > span {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: #e7eadf;
+  display: grid;
+  place-items: center;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 20px;
+  padding: 6px 9px;
+  background: #f0f1ed;
+  font-size: 8px;
+  color: #444;
+}
+.status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #859086;
+}
+.status.preparing {
+  background: #eef5d7;
+}
+.status.preparing i {
+  background: #84a721;
+}
+.status.ready {
+  background: #dcf3e8;
+}
+.status.ready i {
+  background: #208756;
+}
+.status.cancelled {
+  background: #f5e5e1;
+}
+.status.cancelled i {
+  background: #b34b3c;
+}
+.order-tabs {
+  display: flex;
+  gap: 25px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 18px;
+  overflow: auto;
+}
+.order-tabs button {
+  border: 0;
+  background: transparent;
+  padding: 12px 0;
+  font-size: 11px;
+  color: #777;
+  white-space: nowrap;
+  position: relative;
+}
+.order-tabs button.active {
+  color: var(--ink);
+  font-weight: 700;
+}
+.order-tabs button.active:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid var(--ink);
+}
+.order-tabs span {
+  font-size: 8px;
+  background: #e4e6df;
+  border-radius: 20px;
+  padding: 2px 5px;
+  margin-left: 6px;
+}
+.full-panel {
+  padding: 25px;
+}
+.subtle {
+  font-size: 9px;
+  color: #888;
+}
+.date-picker {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}

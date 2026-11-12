@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Megrim&display=swap");
+
+:root {
+  --ink: #0d100e;
+  --paper: #f7f8f2;
+  --white: #fff;
+  --green: #b9ef36;
+  --deep: #153f2e;
+  --muted: #69716b;
+  --line: #cbd0c8;
+  --soft: #e8eee3;
+  --terracotta: #b9ef36;
+  --ochre: #b9ef36;
+  --navy: #0d100e;
+  --body: "Josefin Sans", sans-serif;
+  --display: "Josefin Sans", sans-serif;
+  --editorial: "Josefin Sans", sans-serif;
+  --sketch: "Megrim", sans-serif;
+  --poster: "Josefin Sans", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  background-image:
+    radial-gradient(rgba(16, 19, 17, 0.045) 0.7px, transparent 0.7px),
+    linear-gradient(90deg, rgba(21, 61, 45, 0.018) 1px, transparent 1px);
+  background-size:
+    5px 5px,
+    42px 42px;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(184, 239, 51, 0.45);
+  outline-offset: 2px;
+}
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+}

@@ -1,0 +1,306 @@
+.sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 230px;
+    background: var(--ink);
+    color: #fff;
+    padding: 30px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    z-index: 30;
+    transition:
+      width 0.25s ease,
+      padding 0.25s ease,
+      transform 0.25s ease;
+  }
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 25;
+    border: 0;
+    cursor: pointer;
+  }
+.sidebar-toggle {
+  position: absolute;
+  top: 82px;
+  right: -14px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  border: 1px solid #3c443e;
+  background: var(--green);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+.sidebar-toggle svg {
+    transform: rotate(180deg);
+    transition: transform 0.25s ease;
+  }
+  /* On mobile the chevron points right when the drawer is closed and
+     rotates to indicate the drawer is open. */
+  @media (max-width: 760px) {
+    .sidebar-toggle svg {
+      transform: rotate(0deg);
+    }
+    .sidebar-open .sidebar-toggle svg {
+      transform: rotate(180deg);
+    }
+  }
+.brand {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    background: none;
+    border: 0;
+    color: var(--ink);
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0;
+  }
+  /* Sidebar sits on a dark background, so the logo must read white. */
+  .sidebar .brand {
+    color: #fff;
+  }
+.brand-light {
+  color: #fff;
+}
+.brand-dot {
+  color: var(--green);
+}
+.brand-mark {
+  width: 27px;
+  height: 25px;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+.brand-mark span {
+  display: block;
+  width: 6px;
+  background: var(--green);
+  border-radius: 8px 8px 1px 1px;
+  transform: rotate(-8deg);
+}
+.brand-mark span:nth-child(1) {
+  height: 13px;
+}
+.brand-mark span:nth-child(2) {
+  height: 22px;
+}
+.brand-mark span:nth-child(3) {
+  height: 17px;
+}
+.sidebar nav {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sidebar nav button {
+  border: 0;
+  background: transparent;
+  color: #89908b;
+  border-radius: 2px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  font-size: 14px;
+}
+.sidebar nav button:hover {
+  color: #fff;
+}
+.sidebar nav button.active {
+  background: #242825;
+  color: #fff;
+}
+.sidebar nav button.active svg {
+  color: var(--green);
+}
+.sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #2e332f;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mini-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+.mini-profile div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.mini-profile b {
+  font-size: 12px;
+}
+.mini-profile span {
+  font-size: 9px;
+  color: #818782;
+  margin-top: 2px;
+}
+.icon-only {
+  background: transparent;
+  border: 0;
+  color: #777f79;
+}
+.main {
+  margin-left: 230px;
+  width: calc(100% - 230px);
+  transition:
+    margin-left 0.25s ease,
+    width 0.25s ease;
+}
+.sidebar-collapsed .sidebar {
+  width: 82px;
+  padding-inline: 16px;
+}
+.sidebar-collapsed .sidebar-toggle svg {
+  transform: rotate(0);
+}
+.sidebar-collapsed .sidebar .brand {
+  justify-content: center;
+}
+.sidebar-collapsed .sidebar .brand > span:last-child,
+.sidebar-collapsed .sidebar nav button > span,
+.sidebar-collapsed .mini-profile > div:last-child {
+  display: none;
+}
+.sidebar-collapsed .sidebar nav button {
+  justify-content: center;
+  padding-inline: 0;
+}
+.sidebar-collapsed .sidebar-bottom {
+  flex-direction: column;
+  gap: 18px;
+}
+.sidebar-collapsed .mini-profile {
+  justify-content: center;
+}
+.sidebar-collapsed .main {
+  margin-left: 82px;
+  width: calc(100% - 82px);
+}
+.topbar {
+  height: 92px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 4vw;
+  gap: 30px;
+  background: rgba(245, 245, 239, 0.94);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.topbar-title {
+  margin-right: auto;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+  color: #778078;
+  text-transform: uppercase;
+}
+.topbar-title h2 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 400;
+  margin: 4px 0 0;
+}
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.search-button {
+  width: 220px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: #858b86;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 11px;
+  font-size: 12px;
+}
+.search-button kbd {
+  margin-left: auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 2px 5px;
+  font-size: 9px;
+}
+.round-button,
+.cart-button {
+  height: 40px;
+  min-width: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: #fff;
+  position: relative;
+}
+.round-button i {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  right: 8px;
+  top: 7px;
+}
+.cart-button {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.cart-button span {
+  position: absolute;
+  background: var(--green);
+  color: var(--ink);
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  right: -5px;
+  top: -5px;
+}
+.mobile-menu {
+  display: none;
+}
+.page {
+  padding: 42px 4vw 70px;
+  max-width: 1600px;
+  margin: auto;
+}
+.home-page {
+  padding-top: 0;
+}
